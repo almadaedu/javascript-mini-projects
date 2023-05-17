@@ -1,18 +1,17 @@
 const pokemonList = document.getElementById("pokemonList");
 
+
 function convertPokemon(pokemon) {
   return `
-    <li class="pokemon">
-        <span class="number">#001</span>
+    <li class="pokemon ${pokemon.type}">
+        <span class="number">#00${pokemon.number}</span>
         <span class="name">${pokemon.name}</span>
 
         <div class="detail">
             <ol class="types">
-                <li class="type">Grass</li>
-                <li class="type">Poison</li>
+                ${pokemon.types.map((type) => `<li class="type  ${type}">${type}</li>`).join(' ')}
             </ol>
-
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.photo}.png"
                 alt="${pokemon.name}">
         </div>
     </li>

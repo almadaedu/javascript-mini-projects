@@ -12,7 +12,6 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: green;
 }
 
 .pokemon .number {
@@ -49,7 +48,8 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
-    background-color: #77c850;
+    filter: brightness(1.1);
+    text-transform: capitalize;
 }
 
 .pokemon .detail img {
